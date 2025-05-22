@@ -97,3 +97,6 @@ button:hover {
     box-shadow: var(--dark-shadow);
 }
 
+.hidden {
+    display: none;
+}

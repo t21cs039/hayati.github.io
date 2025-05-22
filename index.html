@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Quiz Home</title>
+  <title>Our Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-  <div class="center-box">
-    <h1 class="alegreya-bold">Welcome to the Quiz!</h1>
+
+  <div id="intro-question" class="center-box">
+    <h2>Are you Hayati?</h2>
+    <button onclick="showHomepage()">Yes</button>
+    <button onclick="retryQuestion()">No</button>
+  </div>
+
+  <div id="homepage" class="center-box hidden">
+    <h1 class="alegreya-bold">Welcome aboard!</h1>
     <h1>Are you ready?</h1>
     <a href="main.html">
-      <button style="padding: 10px 20px; font-size: 16px;">Start Quiz</button>
+      <button>Start Quiz</button>
     </a>
   </div>
+
+  <div id="retry-intro-question" class="center-box hidden">
+    <h2>Try again.</h2>
+    <h2>Are you Hayati?</h2>
+    <button onclick="showHomepage()">Yes</button>
+    <button onclick="retryQuestion()">No</button>
+  </div>
+  <script>
+
+    function retryQuestion(){
+      document.getElementById("retry-intro-question").classList.remove("hidden");
+      document.getElementById("intro-question").classList.add("hidden");
+      document.getElementById("homepage").classList.add("hidden");
+    }
+    function showHomepage() {
+      document.getElementById("retry-intro-question").classList.add("hidden");
+      document.getElementById("intro-question").classList.add("hidden");
+      document.getElementById("homepage").classList.remove("hidden");
+    }
+  </script>
+
+
 </body>
 </html>

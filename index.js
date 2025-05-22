@@ -51,12 +51,12 @@ const quizData = [
   
   function showResult() {
     quiz.innerHTML = `
-      <h1>Quiz Completed!</h1>
+      <h1>Cake is ready!</h1>
       <p>Your score: ${score}/${quizData.length}</p>
       <button id="homeBtn">Return to Home</button>
   `;
       document.getElementById("homeBtn").addEventListener("click", () => {
-          location.href = "main.html"; 
+          location.href = "index.html"; 
       });
       
   }
