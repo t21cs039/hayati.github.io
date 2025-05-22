@@ -15,8 +15,16 @@
 
 }
 
+
+.alegreya-bold {
+  font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Alegreya", Arial, sans-serif;
   background-color: rgb(214, 117, 117);
 }
 
