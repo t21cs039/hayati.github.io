@@ -8,6 +8,8 @@
 <body>
 
   <div id="intro-question" class="center-box">
+    <div id="re-retry-intro-question" class="hidden"><h2>For real? Just hit the yes button 😒</h2></div>
+    <div id="retry-intro-question" class="hidden"><h2>Try again.</h2></div>
     <h2>Are you Hayati?</h2>
     <button onclick="showHomepage()">Yes</button>
     <button onclick="retryQuestion()">No</button>
@@ -21,21 +23,23 @@
     </a>
   </div>
 
-  <div id="retry-intro-question" class="center-box hidden">
-    <h2>Try again.</h2>
-    <h2>Are you Hayati?</h2>
-    <button onclick="showHomepage()">Yes</button>
-    <button onclick="retryQuestion()">No</button>
-  </div>
   <script>
+    let retry = 0
 
     function retryQuestion(){
-      document.getElementById("retry-intro-question").classList.remove("hidden");
-      document.getElementById("intro-question").classList.add("hidden");
-      document.getElementById("homepage").classList.add("hidden");
+      retry++;
+
+      if (retry ==1){
+        document.getElementById("retry-intro-question").classList.remove("hidden");
+      }
+      else{
+        document.getElementById("retry-intro-question").classList.add("hidden");
+        document.getElementById("re-retry-intro-question").classList.remove("hidden");
+      }
     }
     function showHomepage() {
       document.getElementById("retry-intro-question").classList.add("hidden");
+      document.getElementById("re-retry-intro-question").classList.add("hidden");
       document.getElementById("intro-question").classList.add("hidden");
       document.getElementById("homepage").classList.remove("hidden");
     }
