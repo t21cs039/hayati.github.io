@@ -8,16 +8,25 @@
 <body>
 
   <div id="intro-question" class="center-box">
-    <div id="re-retry-intro-question" class="hidden"><h2>For real? Just hit the yes button 😒</h2></div>
-    <div id="retry-intro-question" class="hidden"><h2>Try again.</h2></div>
+    <div id="re-retry-intro-question" class="hidden">
+      <h2>For real? Just hit the yes button 😒</h2>
+    </div>
+
+    <div id="retry-intro-question" class="hidden">
+      <h2>Try again.</h2>
+    </div>
+
     <h2>Are you Hayati?</h2>
-    <button onclick="showHomepage()">Yes</button>
-    <button onclick="retryQuestion()">No</button>
+    
+    <div style="margin-top: 10px;">
+      <button onclick="showHomepage()">Yes</button>
+      <button onclick="retryQuestion()">No</button>
+    </div>
   </div>
 
   <div id="homepage" class="center-box hidden">
     <h1 class="alegreya-bold">Welcome aboard!</h1>
-    <h1>Are you ready?</h1>
+    <p class="body h1">Are you ready?</p>
     <a href="main.html">
       <button>Start Quiz</button>
     </a>

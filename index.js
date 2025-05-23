@@ -57,6 +57,10 @@ const quizData = [
   `;
       document.getElementById("homeBtn").addEventListener("click", () => {
           location.href = "index.html"; 
+          document.getElementById("retry-intro-question").classList.add("hidden");
+          document.getElementById("re-retry-intro-question").classList.add("hidden");
+          document.getElementById("intro-question").classList.add("hidden");
+          document.getElementById("homepage").classList.remove("hidden");
       });
       
   }
